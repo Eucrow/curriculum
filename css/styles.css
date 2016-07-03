@@ -28,19 +28,17 @@ nav {
     width: 100%;
     font-size: 1rem;
 }
-
-nav>ul{
-    list-style-type: none;
-    display: flex;
-    height: 2rem;
-    flex-flow: flex-end;
-    padding: 0px;
-    margin: 0px;
-}
-
-nav li{
-    padding: 0.5rem;
-}
+    nav>ul{
+        list-style-type: none;
+        display: flex;
+        height: 2rem;
+        flex-flow: flex-end;
+        padding: 0px;
+        margin: 0px;
+    }
+    nav li{
+        padding: 0.5rem;
+    }
 
 /*cabecera, ocupa todo un viewport*/
 header {
@@ -50,34 +48,21 @@ header {
     background-size: cover;
     color: white;
 }
-
-header>h1{
-    padding-top: 10vh;
-    align-content: center;
-    font-size: 5rem;
-}
-header>p{
-    font-size: 2rem;
-}
+    header>h1{
+        padding-top: 10vh;
+        align-content: center;
+        font-size: 5rem;
+    }
+    header>p{
+        font-size: 2rem;
+    }
 
 /*contenedor*/
 .container{
     max-width: 1200px;
     padding: 2rem 0;
+    margin: 0px auto;
 }
-/*otros*/
-.negrita{
-    font-size: 1.3rem;
-    font-weight: bolder;
-}
-
-/*SECCION QUIEN SOY*/
-
-#quien-soy img{
-    float: left;
-    margin-right: 2rem;
-}
-
 
 /*CONTENEDOR FLEXBOX*/
 .container-flex{
@@ -88,26 +73,44 @@ header>p{
     width: 100%;
 }
 
+/*SECCION QUIEN SOY*/
+#quien-soy img{
+    float: left;
+    margin-right: 2rem;
+}
+
 /*SECCIONES EXPERIENCIA PROFESIONAL Y ESTUDIOS*/
-.trabajo,
-.estudios{
+article{
     margin: 2rem 0 0 0;
     padding: 10px;
     width: 48%;
     background-color: rgba(0,0,255,0.1)
 }
-    .trabajo p.fechas,
-    .estudios p.fechas{
+    article p.fechas{
         display: inline;
         font-size: 1.2rem;
         padding-right: 10px;
     }
-    .trabajo h3{
+    article h3{
         display: inline;
     }
-    .trabajo .lugar,
-    .trabajo .descripcion{
+    article .lugar,
+    article .descripcion{
         display: inline-block;
     }
 
-/*SECCION FORMACIÓN*/
+/*SECCION SOBRE MI*/
+.sobremi{
+    width: 100%;
+    background-color: rgb(120, 120, 120);
+}
+    .sobremi iframe{
+        margin: auto;
+        display: block;
+    }
+
+/*otros*/
+.negrita{
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
