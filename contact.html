@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Marco A. Ámez Fernández Curriculum</title>
+    </head>
+    <body>
+        <header id="portada">
+            <h1>Marco A. Ámez Fernández</h1>
+            <p>Ayudante de investicación en I.E.O. Desarrollo web.</p>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html#portada">portada</a></li>
+                <li><a href="index.html#quien-soy">quien soy</a></li>
+                <li><a href="index.html#experiencia">experiencia</a></li>
+                <li><a href="index.html#estudios">estudios</a></li>
+                <li><a href="index.html#sobre-mi">sobre mi</a></li>
+                <li><a href="contact.html">contacto</a></li>
+            </ul>
+        </nav>
+
+        <section id ="contacto" class="">
+        <form class="form" name="contacto" method="get">
+            <h2>Contacto</h2>
+            <div class="form-row">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" placeholder="apellidos" required>
+            </div>
+
+            <div class="form-row">
+                <label>Email:</label>
+                <input type="email" id="email" name="email" placeholder="name@company.com" pattern="[A-Za-z0-9\.\+]+@[A-Za-z0-9]+\.[A-Za-z0-9\.]+" required>
+            </div>
+
+            <div class="form-row">
+                <label>Teléfono de contacto (sólo España):</label>
+                <input type="text" id="tel" name="tel" placeholder="teléfono" pattern="^[9|8|7|6]\d{8}$">
+            </div>
+
+            <div class="form-row">
+                <label>Cómo me has conocido:</label>
+                <input type="checkbox" name="busqueda" value="Busqueda">Buscando por internet
+                <input type="checkbox" name="colega" value="Colega">Tenemos un colega común
+                <input type="checkbox" name="trabajo" value="Trabajo">He visto tu trabajo
+                <input type="checkbox" name="otros" value="Otros">Otros
+                <input type="text" name="queotros" value="Queotros">
+            </div>
+
+            <div class="form-row">
+                <input type="submit" name="Enviar">
+            </div>
+        </form>
+
+        </section>
+        <footer>
+            Marco A. Ámez Fernández, 2016.
+        </footer>
+    </body>
+</html>
