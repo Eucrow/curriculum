@@ -3,27 +3,27 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="css/styles.css">
-        <link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans" rel="stylesheet">
+        <!-- <link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans" rel="stylesheet"> -->
         <title>Marco A. Ámez Fernández Curriculum</title>
     </head>
     <body>
-        <header id="portada">
+        <header id="inicio">
             <h1>Marco A. Ámez Fernández</h1>
-            <p>Ayudante de investicación en I.E.O. Desarrollo web.</p>
+            <p>Ayudante de investicación en I.E.O. - Desarrollo web</p>
         </header>
-        <nav>
-            <ul>
-                <li><a href="#portada">portada</a></li>
-                <li><a href="#quien-soy">quien soy</a></li>
-                <li><a href="#experiencia">experiencia</a></li>
-                <li><a href="#estudios">estudios</a></li>
-                <li><a href="#sobre-mi">sobre mi</a></li>
-                <li><a href="contact.html">contacto</a></li>
+        <nav class="navbar">
+            <ul class="navbar-list">
+                <li class="navbar-item"><a href="#inicio" class="navbar-item active">inicio</a></li>
+                <li class="navbar-item"><a href="#quien-soy">quien soy</a></li>
+                <li class="navbar-item"><a href="#experiencia">experiencia</a></li>
+                <li class="navbar-item"><a href="#estudios">estudios</a></li>
+                <li class="navbar-item"><a href="#sobre-mi">sobre mi</a></li>
+                <li class="navbar-item"><a href="contact.html">contacto</a></li>
             </ul>
         </nav>
 
         <section id ="quien-soy" class="clearfix container">
-            <img src="https://placekitten.com/g/300/300" alt="Marco A. Amez photography">
+            <!-- <img src="https://placekitten.com/g/300/300" alt="Marco A. Amez photography"> -->
             <h2>Quien Soy</h2>
             <p class="negrita">Asturiano en la Cantabria aislada, allí donde no hay cobertura móvil y el teléfono llega sólo vía satélite.</p>
             <p>Ayudante de investigación en el Proyecto SAP (Seguimiento de la Actividad
@@ -173,10 +173,11 @@
             </div>
         </section>
         <section id ="sobre-mi" class="sobremi">
-            <div class="container">
+            <!-- <div class="container">
                 <h2>Sobre mí</h2>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/2BEComrj0A4" frameborder="0" allowfullscreen></iframe>
-            </div>
+            </div> -->
+            <img src="images/mural-3.jpg">
         </section>
 
         <footer>
@@ -184,4 +185,5 @@
             <p class="email">prueba@gmail.com</p>
         </footer>
     </body>
+    <script src="js/menu.js"></script>
 </html>
