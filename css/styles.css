@@ -159,6 +159,9 @@ article{
         margin: auto;
         display: block;
     }
+    .sobremi img{
+        width: 100%;
+    }
 
 /*FOOTER*/
 footer{
