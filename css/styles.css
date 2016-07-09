@@ -38,7 +38,6 @@ h1, h2, h3{
     .navbar .navbar-list{
         list-style-type: none;
         display: flex;
-        flex-flow: flex-end;
         padding: 0px;
         margin: 0px;
     }
@@ -123,6 +122,19 @@ article{
         display: inline-block;
     }
 
+    /*oculto por defecto*/
+    article .actividades_lista{
+        display: none;
+    }
+
+    article .actividades-oculto{
+        display: none;
+    }
+    article .actividades-visible{
+        display: block;
+    }
+
+
 /*SECCION SOBRE MI*/
 .sobremi{
     width: 100%;
@@ -150,4 +162,28 @@ footer{
 .negrita{
     font-size: 1.3rem;
     font-weight: bolder;
+}
+
+/*FORMULARIO CONTACTO*/
+
+form{
+    padding-top: 2rem;
+    margin: 0 auto;
+}
+
+form .mensaje{
+    display: block;
+}
+
+.form-row{
+    display: block;
+    padding: 2rem 0 0 0;
+}
+.meetme label::after{
+    content: " ";
+    display: block;
+}
+
+.meetme #otros{
+    display: none
 }

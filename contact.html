@@ -2,26 +2,24 @@
 <html lang="es">
     <head>
         <meta charset="utf-8">
-        <title>Marco A. Ámez Fernández Curriculum</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="/css/master.css" media="screen" title="no title" charset="utf-8">
+        <title>Marco A. Ámez Fernández Contacto</title>
     </head>
     <body>
-        <header id="portada">
-            <h1>Marco A. Ámez Fernández</h1>
-            <p>Ayudante de investicación en I.E.O. Desarrollo web.</p>
-        </header>
-        <nav>
-            <ul>
-                <li><a href="index.html#inicio">inicio</a></li>
-                <li><a href="index.html#quien-soy">quien soy</a></li>
-                <li><a href="index.html#experiencia">experiencia</a></li>
-                <li><a href="index.html#estudios">estudios</a></li>
-                <li><a href="index.html#sobre-mi">sobre mi</a></li>
-                <li><a href="contact.html">contacto</a></li>
+        <nav class="navbar">
+            <ul class="navbar-list">
+                <li class="navbar-item"><a href="index.html#inicio">inicio</a></li>
+                <li class="navbar-item"><a href="index.html#quien-soy">quien soy</a></li>
+                <li class="navbar-item"><a href="index.html#experiencia">experiencia</a></li>
+                <li class="navbar-item"><a href="index.html#estudios">estudios</a></li>
+                <li class="navbar-item"><a href="index.html#sobre-mi">sobre mi</a></li>
+                <li class="navbar-item active"><a href="contact.html">contacto</a></li>
             </ul>
         </nav>
 
-        <section id ="contacto" class="">
-        <form class="form" name="contacto" method="get">
+        <section class="container">
+        <form class="form" id="formulario_contacto" name="contacto" method="get" novalidate>
             <h2>Contacto</h2>
             <div class="form-row">
                 <label for="nombre">Nombre:</label>
@@ -32,7 +30,7 @@
 
             <div class="form-row">
                 <label>Email:</label>
-                <input type="email" id="email" name="email" placeholder="name@company.com" pattern="[A-Za-z0-9\.\+]+@[A-Za-z0-9]+\.[A-Za-z0-9\.]+" required>
+                <input type="email" id="email" name="email" placeholder="name@company.com" required>
             </div>
 
             <div class="form-row">
@@ -40,15 +38,24 @@
                 <input type="text" id="tel" name="tel" placeholder="teléfono" pattern="^[9|8|7|6]\d{8}$">
             </div>
 
-            <div class="form-row">
+            <div class="form-row meetme">
                 <label>Cómo me has conocido:</label>
-                <input type="checkbox" name="busqueda" value="Busqueda">Buscando por internet
-                <input type="checkbox" name="colega" value="Colega">Tenemos un colega común
-                <input type="checkbox" name="trabajo" value="Trabajo">He visto tu trabajo
-                <input type="checkbox" name="otros" value="Otros">Otros
-                <input type="text" name="queotros" value="Queotros">
+                <input type="radio" id="meet_1" name="meet_radio" value="Buscando por internet" required>
+                <label for="meet_1">Buscando por internet</label>
+                <input type="radio" id="meet_2" name="meet_radio" value="Tenemos un colega común" required>
+                <label for="meet_2">Tenemos un colega común</label>
+                <input type="radio" id="meet_3" name="meet_radio" value="He visto tu trabajo" required>
+                <label for="meet_3">He visto tu trabajo</label>
+                <input type="radio" id="meet_4" name="meet_radio" value="Padres" required>
+                <label for="meet_4">Soy amigo de tus padres</label>
+                <input type="radio" id="meet_otros" name="meet_radio" value="Otros" required>
+                <label for="meet_5">Otros</label>
+                <input type="text" id="otros" name="otros">
             </div>
-
+            <div class="form-row">
+                <label for="mensaje" class="mensaje">Me quieres contar:</label>
+                <textarea name="mensaje" id="mensaje" rows="8" cols="40"></textarea>
+            </div>
             <div class="form-row">
                 <input type="submit" name="Enviar">
             </div>
@@ -59,4 +66,5 @@
             Marco A. Ámez Fernández, 2016.
         </footer>
     </body>
+    <script src="js/form.js"></script>
 </html>

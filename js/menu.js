@@ -5,7 +5,6 @@ for (var i = 0; i < navbarItems.length; i++) {
     navbarItems[i].addEventListener('click', function(evt){
         this.classList.add('active');
 		var sectionToGo = this.getElementsByTagName('a')[0].href.split('#');
-        console.log(sectionToGo);
 
         if(sectionToGo.length > 1) {
             evt.preventDefault();
