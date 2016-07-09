@@ -80,7 +80,7 @@ header {
         font-size: 1.8rem;
     }
 
-/*contenedor*/
+/*contenedor global*/
 .container{
     max-width: 1200px;
     padding: 2rem 0;
@@ -92,7 +92,7 @@ header {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    align-items: stretch;
+    align-items: flex;
     width: 100%;
 }
 
@@ -107,7 +107,6 @@ article{
     margin: 2rem 0 0 0;
     padding: 10px;
     width: 48%;
-    background-color: rgba(0,0,255,0.1)
 }
     article p.fechas{
         display: inline;
@@ -116,6 +115,10 @@ article{
     }
     article h3{
         display: inline;
+    }
+
+    article ul{
+        margin-top: 0.5rem;
     }
     article .lugar,
     article .descripcion{
@@ -128,12 +131,24 @@ article{
     }
 
     article .actividades-oculto{
-        display: none;
+        height: 0;
+        overflow: hidden;
     }
     article .actividades-visible{
-        display: block;
+        height: 0;
+        overflow: hidden;
+        animation: slide_down 1.5s forwards;
     }
 
+    @keyframes slide_down {
+        0% {
+            height: 0;
+        }
+        100% {
+            height: 100%;
+        }
+
+    }
 
 /*SECCION SOBRE MI*/
 .sobremi{
