@@ -18,6 +18,10 @@ html{
 h1, h2, h3{
         font-family: 'Merriweather', serif;
 }
+h2 {
+    	background-color: rgb(150, 150, 150);
+        padding: 0.8rem;
+}
 
 /*CLEARFIX*/
 .clearfix{
@@ -31,8 +35,8 @@ h1, h2, h3{
     flex-direction: row-reverse;
     top: 0px;
     width: 100%;
-    font-size: 1rem;
     background-color: rgb(150, 150, 150);
+    border-bottom: #00000 solid 3px;
 
 }
     .navbar .navbar-list{
@@ -70,31 +74,42 @@ header {
 
 }
     header>h1{
-        padding: 12vh 0 0 4vh;
+        padding: 4rem 0 0 2rem;
         align-content: center;
         font-size: 4rem;
         font-weight: 600;
     }
     header>p{
-        padding: 0 0 0 4vh;
+        padding: 0 0 0 2rem;
         font-size: 1.8rem;
     }
 
 /*contenedor global*/
 .container{
-    max-width: 1200px;
+    width: 100%;
     padding: 2rem 0;
     margin: 0px auto;
-}
+        text-align: center;
+    }
 
 /*CONTENEDOR FLEXBOX*/
 .container-flex{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    align-items: flex;
     width: 100%;
 }
+    .container-flex article{
+        width: 48%;
+        text-align: center;
+    }
+    .container-flex article ul{
+        width: 100%
+    }
+    .container-flex .formacion{
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
 
 /*SECCION QUIEN SOY*/
 #quien-soy img{
@@ -102,53 +117,62 @@ header {
     margin-right: 2rem;
 }
 
+
 /*SECCIONES EXPERIENCIA PROFESIONAL Y ESTUDIOS*/
-article{
+.container article{
     margin: 2rem 0 0 0;
     padding: 10px;
-    width: 48%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
-    article p.fechas{
+    .container article p.fechas,
+    .container-flex article p.fechas{
         display: inline;
         font-size: 1.2rem;
         padding-right: 10px;
     }
-    article h3{
+    .container article h3,
+    .container-flex article h3{
         display: inline;
     }
-
-    article ul{
+    .container article ul,
+    .containerflex article ul{
         margin-top: 0.5rem;
     }
-    article .lugar,
-    article .descripcion{
+    .container article .lugar,
+    .container article .descripcion,
+    .containerflex article .lugar,
+    .containerflex article .descripcion{
         display: inline-block;
     }
 
-    /*oculto por defecto*/
-    article .actividades_lista{
-        display: none;
+    .container article ul,
+    .container-flex article ul{
+        max-width: 50%;
+        text-align: left;
+        margin: 0 auto;
+        padding-top: 0.5rem;
     }
-
-    article .actividades-oculto{
-        height: 0;
+    /*oculto por defecto*/
+    .container article .actividades{
+        max-height: 0px;
         overflow: hidden;
     }
-    article .actividades-visible{
-        height: 0;
+    .container article .actividades-visible{
+        max-height: 350px;
         overflow: hidden;
         animation: slide_down 1.5s forwards;
     }
-
-    @keyframes slide_down {
+    @keyframes slide_down{
         0% {
-            height: 0;
+            max-height: 0;
         }
         100% {
-            height: 100%;
+            max-height: 350px;
         }
-
     }
+
+
 
 /*SECCION SOBRE MI*/
 .sobremi{
@@ -177,9 +201,10 @@ footer{
     }
 
 /*otros*/
-.negrita{
+.introduccion{
     font-size: 1.3rem;
     font-weight: bolder;
+    padding: 0.5rem 0;
 }
 
 /*FORMULARIO CONTACTO*/
