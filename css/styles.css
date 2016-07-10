@@ -64,11 +64,10 @@ h2 {
 header {
     width: 100%;
     height: 100vh;
-    background-image: url("../images/mural-2.jpg");
+    background-image: url("../images/mural-3.jpg");
     /*background-image: url("https://placekitten.com/g/1080/900");*/
     background-size: cover;
     color: white;
-
 }
     header>h1{
         padding: 4rem 0 0 2rem;
@@ -94,7 +93,6 @@ header {
     float: left;
     margin-right: 2rem;
 }
-
 
 /*SECCIONES EXPERIENCIA PROFESIONAL Y ESTUDIOS*/
 .container article{
@@ -149,12 +147,10 @@ header {
         }
     }
 
-
-
 /*SECCION SOBRE MI*/
 .sobremi{
     width: 100%;
-    background-color: rgb(120, 120, 120);
+    background-color: rgb(150, 150, 150);
 }
     .sobremi iframe{
         margin: auto;
@@ -185,30 +181,21 @@ footer{
 }
 
 /*FORMULARIO CONTACTO*/
-
 form{
     padding-top: 2rem;
     margin: 0 auto;
 }
-
-form .mensaje{
-    display: block;
-}
-
-.form-row{
-    display: block;
-    padding: 2rem 0 0 0;
-}
-.meetme label::after{
-    content: " ";
-    display: block;
-}
-
-.meetme #otros{
-    display: none
-}
-
-/*IE9*/
-.no-flexbox{
-    background-color: red;
-}
+    form .mensaje{
+        display: block;
+    }
+    .form-row{
+        display: block;
+        padding: 2rem 0 0 0;
+    }
+    .meetme label::after{
+        content: " ";
+        display: block;
+    }
+    .meetme #otros{
+        display: none
+    }
