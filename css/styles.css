@@ -31,22 +31,20 @@ h2 {
 /*barra de navegación*/
 .navbar {
     position: fixed;
-    display: flex;
-    flex-direction: row-reverse;
     top: 0px;
     width: 100%;
     background-color: rgb(150, 150, 150);
     border-bottom: #00000 solid 3px;
-
 }
     .navbar .navbar-list{
         list-style-type: none;
-        display: flex;
+        float: right;
         padding: 0px;
         margin: 0px;
     }
     .navbar .navbar-list .navbar-item{
-        padding: 0.80rem;
+        padding: 0.8rem;
+        display: inline-block;
     }
     .navbar .navbar-list .navbar-item a{
         text-decoration: none;
@@ -57,7 +55,6 @@ h2 {
     	color: #F7F7F7;
     	background-color: #FF0000;
     }
-
     .navbar .navbar-list .navbar-item.active-reverse {
     	color: #101010;
     	background-color: #F7F7F7;
@@ -92,25 +89,6 @@ header {
         text-align: center;
     }
 
-/*CONTENEDOR FLEXBOX*/
-.container-flex{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    width: 100%;
-}
-    .container-flex article{
-        width: 48%;
-        text-align: center;
-    }
-    .container-flex article ul{
-        width: 100%
-    }
-    .container-flex .formacion{
-        font-weight: bold;
-        font-size: 1.1rem;
-    }
-
 /*SECCION QUIEN SOY*/
 #quien-soy img{
     float: left;
@@ -125,29 +103,28 @@ header {
     max-width: 1200px;
     margin: 0 auto;
 }
-    .container article p.fechas,
-    .container-flex article p.fechas{
+    .container article p.fechas{
         display: inline;
         font-size: 1.2rem;
         padding-right: 10px;
     }
-    .container article h3,
-    .container-flex article h3{
+    .container article h3{
         display: inline;
     }
-    .container article ul,
-    .containerflex article ul{
+    .container article ul{
         margin-top: 0.5rem;
     }
     .container article .lugar,
-    .container article .descripcion,
-    .containerflex article .lugar,
-    .containerflex article .descripcion{
+    .container article .descripcion{
         display: inline-block;
     }
-
-    .container article ul,
-    .container-flex article ul{
+    .container .formacion{
+        font-weight: bold;
+        font-size: 1.1rem;
+        background-color: rgb(150, 150, 150);
+        padding: 0.6rem;
+    }
+    .container article ul{
         max-width: 50%;
         text-align: left;
         margin: 0 auto;
@@ -229,4 +206,9 @@ form .mensaje{
 
 .meetme #otros{
     display: none
+}
+
+/*IE9*/
+.no-flexbox{
+    background-color: red;
 }
