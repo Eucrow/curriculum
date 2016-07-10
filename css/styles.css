@@ -16,11 +16,11 @@ html{
     font-family: 'Open Sans', sans-serif;
 }
 h1, h2, h3{
-        font-family: 'Merriweather', serif;
+    font-family: 'Merriweather', serif;
 }
 h2 {
-    	background-color: rgb(150, 150, 150);
-        padding: 0.8rem;
+    background-color: rgb(150, 150, 150);
+    padding: 0.8rem;
 }
 
 /*CLEARFIX*/
@@ -118,7 +118,7 @@ header {
     }
     .container .formacion{
         font-weight: bold;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         background-color: rgb(150, 150, 150);
         padding: 0.6rem;
     }
