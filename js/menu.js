@@ -1,9 +1,24 @@
 /*SMOOTH SCROLL*/
 var navbarItems = document.getElementsByClassName('navbar-item');
 
+function addClassActive (element){
+    if (Modernizr.classList){
+        element.classList.add('active');
+    } else {
+        element.className += ' active';
+    }
+}
+
 for (var i = 0; i < navbarItems.length; i++) {
     navbarItems[i].addEventListener('click', function(evt){
-        this.classList.add('active');
+
+        addClassActive(this);
+        // if (Modernizr.classList){
+        //     this.classList.add('active');
+        // } else {
+        //     this.classList += ' active';
+        // }
+
 		var sectionToGo = this.getElementsByTagName('a')[0].href.split('#');
 
         if(sectionToGo.length > 1) {
@@ -72,7 +87,8 @@ function changeMenuStyle(evt){
 		}
 		// navbar.style.backgroundColor = '#F7F7F7';
 		deleteActiveClass();
-		document.querySelector('a[href$="inicio"]').parentNode.classList.add("active");
+        addClassActive(document.querySelector('a[href$="inicio"]').parentNode)
+
 	} else if (window.pageYOffset >= offsetQuienSoy && window.pageYOffset < offsetExperiencia){
 		if(!previous) {
 			previous = 2;
@@ -81,7 +97,8 @@ function changeMenuStyle(evt){
 		}
 		// navbar.style.backgroundColor = '#A4A4A4';
 		deleteActiveClass()
-		document.querySelector('a[href$="quien-soy"]').parentNode.classList.add("active");
+        addClassActive(document.querySelector('a[href$="quien-soy"]').parentNode);
+
 	} else if (window.pageYOffset >= offsetExperiencia && window.pageYOffset < offsetEstudios){
 		if(!previous) {
 			previous = 3;
@@ -90,7 +107,8 @@ function changeMenuStyle(evt){
 		}
 		// navbar.style.backgroundColor = '#F7F7F7';
 		deleteActiveClass();
-		document.querySelector('a[href$="experiencia"]').parentNode.classList.add("active");
+        addClassActive(document.querySelector('a[href$="experiencia"]').parentNode);
+
     } else if (window.pageYOffset >= offsetEstudios && window.pageYOffset < offsetSobreMi){
         if(!previous) {
             previous = 4;
@@ -99,7 +117,7 @@ function changeMenuStyle(evt){
         }
         // navbar.style.backgroundColor = '#F7F7F7';
         deleteActiveClass();
-        document.querySelector('a[href$="estudios"]').parentNode.classList.add("active");
+        addClassActive(document.querySelector('a[href$="estudios"]').parentNode);
     } else if (window.pageYOffset >= offsetSobreMi){
         if(!previous) {
             previous = 5;
@@ -108,13 +126,17 @@ function changeMenuStyle(evt){
         }
         // navbar.style.backgroundColor = '#F7F7F7';
         deleteActiveClass();
-        document.querySelector('a[href$="sobre-mi"]').parentNode.classList.add("active");
+        addClassActive(document.querySelector('a[href$="sobre-mi"]').parentNode);
     }
 }
 
     function deleteActiveClass() {
     	for(var i = 0; i < navbarItems.length; i++){
-    		navbarItems[i].classList.remove('active');
-    		navbarItems[i].classList.remove('active-reverse');
+            if (Modernizr.classList){
+    		    navbarItems[i].classList.remove('active');
+    		    navbarItems[i].classList.remove('active-reverse');
+            } else {
+                navbarItems[i].className = "navbar-item";
+            }
     	}
     }

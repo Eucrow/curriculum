@@ -4,7 +4,6 @@ var othersField = document.getElementById('otros');
 
 
 for (var i = 0; i < othersChekboxes.length; i++) {
-    console.log(othersChekboxes[i]);
     othersChekboxes[i].addEventListener('change', function(evt){
         if (this.id == 'meet_otros' && this.checked == true) {
             othersField.style.display = 'block';
