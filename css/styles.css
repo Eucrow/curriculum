@@ -98,7 +98,7 @@ header {
 .container article{
     margin: 2rem 0 0 0;
     padding: 10px;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
 }
     .container article p.fechas{
@@ -116,7 +116,7 @@ header {
     .container article .descripcion{
         display: inline-block;
     }
-    .container .formacion{
+    .container .titulo-formacion{
         font-weight: bold;
         font-size: 1.2rem;
         background-color: rgb(150, 150, 150);
@@ -127,6 +127,14 @@ header {
         text-align: left;
         margin: 0 auto;
         padding-top: 0.5rem;
+    }
+    .container .derecha{
+        float: right;
+        width: 50%;
+    }
+    .container .izquierda{
+        float: left;
+        width: 50%;
     }
     /*oculto por defecto*/
     .container article .actividades{
