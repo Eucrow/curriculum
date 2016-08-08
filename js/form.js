@@ -37,19 +37,19 @@ form.addEventListener("submit", function(evt){
 
     var submit;
 
-	// if (inputNombre.checkValidity() == false) {
-	// 	alert("Escribe tu nombre");
-	// 	inputNombre.focus();
-	// 	evt.preventDefault();
-	// 	return false;
-	// }
-    //
-    // if (inputApellidos.checkValidity() == false) {
-    //     alert("Escribe tus apellidos");
-    //     inputApellidos.focus();
-    //     evt.preventDefault();
-    //     return false;
-    // }
+	if (inputNombre.checkValidity() == false) {
+		alert("Escribe tu nombre");
+		inputNombre.focus();
+		evt.preventDefault();
+		return false;
+	}
+
+    if (inputApellidos.checkValidity() == false) {
+        alert("Escribe tus apellidos");
+        inputApellidos.focus();
+        evt.preventDefault();
+        return false;
+    }
 
     if (inputEmail.checkValidity() == false) {
 		alert("Escribe tu email");
