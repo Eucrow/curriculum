@@ -16,11 +16,7 @@ html{
     font-family: 'Open Sans', sans-serif;
 }
 h1, h2, h3{
-    font-family: 'Merriweather', serif;
-}
-h2 {
-    background-color: rgb(150, 150, 150);
-    padding: 0.8rem;
+    font-family: 'Niconne', cursive;
 }
 
 /*CLEARFIX*/
@@ -53,7 +49,7 @@ h2 {
     }
     .navbar .navbar-list .navbar-item.active {
     	color: #F7F7F7;
-    	background-color: #FF0000;
+    	background-color: #648430;
     }
     .navbar .navbar-list .navbar-item.active-reverse {
     	color: #101010;
@@ -77,7 +73,7 @@ header {
     }
     header>p{
         padding: 0 0 0 2rem;
-        font-size: 1.8rem;
+        font-size: 1.4rem;
     }
 
 /*contenedor global*/
@@ -85,13 +81,48 @@ header {
     width: 100%;
     padding: 2rem 0;
     margin: 0px auto;
-        text-align: center;
+    text-align: center;
     }
+
+/* SECCIONES */
+    /*titulo secciones*/
+h2 {
+    font-size: 2rem;
+    padding: 0.8rem;
+    display: inline;
+}
+
+.mask{
+  display: inline-block;
+  vertical-align: top;
+}
+
+.shadow{
+  display: inline-block;
+  overflow: hidden;
+  height: 20px;
+  margin-top: 23px; /*it's necesary change with size text*/
+}
+
+.shadow:after{
+  content:'';
+  display: inline-block;
+  vertical-align: middle;
+  width: 300px;
+  height:25px;
+  border-radius: 140px / 10px;
+  box-shadow:0 0 11px #648430;
+  margin-top: -55px; /*it's necesary change with size text*/
+}
 
 /*SECCION QUIEN SOY*/
 #quien-soy img{
     float: left;
     margin-right: 2rem;
+}
+
+h2.oculto{
+    display: none;
 }
 
 /*SECCIONES EXPERIENCIA PROFESIONAL Y ESTUDIOS*/
@@ -100,37 +131,40 @@ header {
     padding: 10px;
     max-width: 1000px;
     margin: 0 auto;
+    font-size: 0.9rem;
 }
+
     .container article p.fechas{
         display: inline;
-        font-size: 1.2rem;
+        font-size: 0.9rem;
         padding-right: 10px;
     }
     .container article h3{
         display: inline;
-    }
-    .container article ul{
-        margin-top: 0.5rem;
+        font-size: 1.8rem;
+        font-weight: normal;
     }
     .container article .lugar,
     .container article .descripcion{
-        display: inline-block;
-    }
-    .container .titulo-formacion{
-        font-weight: bold;
-        font-size: 1.2rem;
-        background-color: rgb(150, 150, 150);
-        padding: 0.6rem;
+        display: block;
+
     }
     .container article ul{
         max-width: 50%;
-        text-align: left;
-        margin: 0 auto;
-        padding-top: 0.5rem;
+        text-align: center;
+        margin: 0.5rem auto;
+        padding: 0px;
+        list-style-type: none;
+
     }
     .container .derecha{
         float: right;
         width: 50%;
+    }
+    .container .derecha .shadow::after,
+    .container .izquierda .shadow::after{
+        width: 100px;
+        box-shadow:0 0 8px #648430;
     }
     .container .izquierda{
         float: left;
@@ -167,6 +201,9 @@ header {
     .sobremi img{
         width: 100%;
     }
+    .sobremi .shadow:after{
+      box-shadow:0 0 10px #FFFFFF;
+    }
 
 /*FOOTER*/
 footer{
@@ -183,8 +220,9 @@ footer{
 
 /*otros*/
 .introduccion{
-    font-size: 1.3rem;
-    font-weight: bolder;
+    font-size: 2rem;
+    font-family: 'Niconne', cursive;
+    /*font-weight: bolder;*/
     padding: 0.5rem 0;
 }
 
@@ -198,9 +236,16 @@ form{
     }
     .form-row{
         display: block;
+        width: 800px;
         padding: 2rem 0 0 0;
+        margin: 0px auto;
     }
-    .meetme label::after{
+    .meetme {
+        display: inline-block;
+        text-align: left;
+
+    }
+    .meetme label:not(#meet_5)::after {
         content: " ";
         display: block;
     }

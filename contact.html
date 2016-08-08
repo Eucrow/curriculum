@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
+        <title>Marco A. Ámez Fernández Contacto</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="css/styles.css">
-        <link rel="stylesheet" href="/css/master.css" media="screen" title="no title" charset="utf-8">
+        <link href="https://fonts.googleapis.com/css?family=Niconne|Open+Sans" rel="stylesheet">
         <title>Marco A. Ámez Fernández Contacto</title>
     </head>
     <body>
@@ -12,7 +13,7 @@
                 <li class="navbar-item"><a href="index.html#inicio">inicio</a></li>
                 <li class="navbar-item"><a href="index.html#quien-soy">quien soy</a></li>
                 <li class="navbar-item"><a href="index.html#experiencia">experiencia</a></li>
-                <li class="navbar-item"><a href="index.html#estudios">estudios</a></li>
+                <li class="navbar-item"><a href="index.html#estudios">formación</a></li>
                 <li class="navbar-item"><a href="index.html#sobre-mi">sobre mi</a></li>
                 <li class="navbar-item active"><a href="contact.html">contacto</a></li>
             </ul>
@@ -20,7 +21,13 @@
 
         <section class="container">
         <form class="form" id="formulario_contacto" name="contacto" method="get" novalidate>
+            <span class="mask">
+                <span class="shadow"></span>
+            </span>
             <h2>Contacto</h2>
+            <span class="mask">
+                <span class="shadow"></span>
+            </span>
             <div class="form-row">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
@@ -38,23 +45,25 @@
                 <input type="text" id="tel" name="tel" placeholder="teléfono" pattern="^[9|8|7|6]\d{8}$">
             </div>
 
-            <div class="form-row meetme">
-                <label>Cómo me has conocido:</label>
-                <input type="radio" id="meet_1" name="meet_radio" value="Buscando por internet" required>
-                <label for="meet_1">Buscando por internet</label>
-                <input type="radio" id="meet_2" name="meet_radio" value="Tenemos un colega común" required>
-                <label for="meet_2">Tenemos un colega común</label>
-                <input type="radio" id="meet_3" name="meet_radio" value="He visto tu trabajo" required>
-                <label for="meet_3">He visto tu trabajo</label>
-                <input type="radio" id="meet_4" name="meet_radio" value="Padres" required>
-                <label for="meet_4">Soy amigo de tus padres</label>
-                <input type="radio" id="meet_otros" name="meet_radio" value="Otros" required>
-                <label for="meet_5">Otros</label>
-                <input type="text" id="otros" name="otros">
+            <div class="form-row">
+                <div class="meetme">
+                    <label>Cómo me has conocido:</label>
+                    <input type="radio" id="meet_1" name="meet_radio" value="Buscando por internet" required>
+                    <label for="meet_1">Buscando por internet</label>
+                    <input type="radio" id="meet_2" name="meet_radio" value="Tenemos un colega común" required>
+                    <label for="meet_2">Tenemos un colega común</label>
+                    <input type="radio" id="meet_3" name="meet_radio" value="He visto tu trabajo" required>
+                    <label for="meet_3">He visto tu trabajo</label>
+                    <input type="radio" id="meet_4" name="meet_radio" value="Padres" required>
+                    <label for="meet_4">Soy amigo de tus padres y quiero saber de una vez a que te dedicas.</label>
+                    <input type="radio" id="meet_otros" name="meet_radio" value="Otros" required>
+                    <label for="meet_5" id="meet_5">Otros</label>
+                    <input type="textarea" id="otros" name="otros" size="40">
+                </div>
             </div>
             <div class="form-row">
                 <label for="mensaje" class="mensaje">Me quieres contar:</label>
-                <textarea name="mensaje" id="mensaje" rows="8" cols="40"></textarea>
+                <textarea name="mensaje" id="mensaje" rows="8" cols="40" required></textarea>
             </div>
             <div class="form-row">
                 <input type="submit" name="Enviar">
@@ -63,7 +72,8 @@
 
         </section>
         <footer>
-            Marco A. Ámez Fernández, 2016.
+            <p>Marco A. Ámez Fernández, 2016.</p>
+            <p class="email">prueba@gmail.com</p>
         </footer>
     </body>
     <script src="js/form.js"></script>
