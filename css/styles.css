@@ -41,6 +41,8 @@ h1, h2, h3{
     .navbar .navbar-list .navbar-item{
         padding: 0.8rem;
         display: inline-block;
+        -webkit-transition: background-color 1s;
+        transition: background-color 1s;
     }
     .navbar .navbar-list .navbar-item a{
         text-decoration: none;
@@ -50,6 +52,7 @@ h1, h2, h3{
     .navbar .navbar-list .navbar-item.active {
     	color: #F7F7F7;
     	background-color: #648430;
+
     }
     .navbar .navbar-list .navbar-item.active-reverse {
     	color: #101010;
@@ -61,13 +64,13 @@ header {
     width: 100%;
     height: 100vh;
     background-image: url("../images/mural-3.jpg");
-    /*background-image: url("https://placekitten.com/g/1080/900");*/
     background-size: cover;
     color: white;
 }
     header>h1{
         padding: 4rem 0 0 2rem;
-        align-content: center;
+        -ms-flex-line-pack: center;
+            align-content: center;
         font-size: 4rem;
         font-weight: 600;
     }
@@ -90,6 +93,7 @@ h2 {
     font-size: 2rem;
     padding: 0.8rem;
     display: inline;
+    color: #304C1C;
 }
 
 .mask{
@@ -111,7 +115,7 @@ h2 {
   width: 300px;
   height:25px;
   border-radius: 140px / 10px;
-  box-shadow:0 0 11px #648430;
+  box-shadow:0 0 12px #304C1C;
   margin-top: -55px; /*it's necesary change with size text*/
 }
 
@@ -136,7 +140,7 @@ h2.oculto{
 
     .container article p.fechas{
         display: inline;
-        font-size: 0.9rem;
+        font-size: 1rem;
         padding-right: 10px;
     }
     .container article h3{
@@ -147,15 +151,13 @@ h2.oculto{
     .container article .lugar,
     .container article .descripcion{
         display: block;
-
     }
     .container article ul{
         max-width: 50%;
         text-align: center;
-        margin: 0.5rem auto;
+        margin: 0.5rem auto 0;
         padding: 0px;
         list-style-type: none;
-
     }
     .container .derecha{
         float: right;
@@ -164,7 +166,7 @@ h2.oculto{
     .container .derecha .shadow::after,
     .container .izquierda .shadow::after{
         width: 100px;
-        box-shadow:0 0 8px #648430;
+        box-shadow:0 0 11px #648430;
     }
     .container .izquierda{
         float: left;
@@ -173,12 +175,28 @@ h2.oculto{
     /*oculto por defecto*/
     .container article .actividades{
         max-height: 0px;
+        opacity: 0;
         overflow: hidden;
+        -webkit-animation: hide 2s reverse;
+                animation: hide 2s reverse;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
     }
     .container article .actividades-visible{
         max-height: 350px;
         overflow: hidden;
-        animation: slide_down 1.5s forwards;
+        -webkit-animation: slide_down 1.5s forwards, show 2s ease-out;
+        animation: slide_down 1.5s forwards, show 2s ease-out;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+    }
+    @-webkit-keyframes slide_down{
+        0% {
+            max-height: 0;
+        }
+        100% {
+            max-height: 350px;
+        }
     }
     @keyframes slide_down{
         0% {
@@ -186,6 +204,38 @@ h2.oculto{
         }
         100% {
             max-height: 350px;
+        }
+    }
+    @-webkit-keyframes show{
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    @keyframes show{
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    @-webkit-keyframes hide{
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+    @keyframes hide{
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
         }
     }
 
@@ -202,7 +252,7 @@ h2.oculto{
         width: 100%;
     }
     .sobremi .shadow:after{
-      box-shadow:0 0 10px #FFFFFF;
+      box-shadow:0 0 11px #FFFFFF;
     }
 
 /*FOOTER*/
@@ -222,8 +272,21 @@ footer{
 .introduccion{
     font-size: 2rem;
     font-family: 'Niconne', cursive;
-    /*font-weight: bolder;*/
     padding: 0.5rem 0;
+}
+.mostrar_actividades{
+    font-size: 0.8rem;
+    opacity: 1;
+}
+.mostrar_actividades:hover,
+.ocultar_actividades:hover{
+    cursor:pointer; cursor: hand;
+}
+.ocultar_actividades{
+    font-size: 0.8rem;
+    opacity: 1;
+    -webkit-animation: show 5s;
+            animation: show 5s;
 }
 
 /*FORMULARIO CONTACTO*/
@@ -243,7 +306,6 @@ form{
     .meetme {
         display: inline-block;
         text-align: left;
-
     }
     .meetme label:not(#meet_5)::after {
         content: " ";

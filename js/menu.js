@@ -13,11 +13,6 @@ for (var i = 0; i < navbarItems.length; i++) {
     navbarItems[i].addEventListener('click', function(evt){
 
         addClassActive(this);
-        // if (Modernizr.classList){
-        //     this.classList.add('active');
-        // } else {
-        //     this.classList += ' active';
-        // }
 
 		var sectionToGo = this.getElementsByTagName('a')[0].href.split('#');
 
@@ -85,27 +80,24 @@ function changeMenuStyle(evt){
 		} else if (previous == 1) {
 			return false;
 		}
-		// navbar.style.backgroundColor = '#F7F7F7';
 		deleteActiveClass();
         addClassActive(document.querySelector('a[href$="inicio"]').parentNode)
 
 	} else if (window.pageYOffset >= offsetQuienSoy && window.pageYOffset < offsetExperiencia){
-		if(!previous) {
+        if(!previous) {
 			previous = 2;
 		} else if (previous == 2) {
 			return false;
 		}
-		// navbar.style.backgroundColor = '#A4A4A4';
 		deleteActiveClass()
         addClassActive(document.querySelector('a[href$="quien-soy"]').parentNode);
 
 	} else if (window.pageYOffset >= offsetExperiencia && window.pageYOffset < offsetEstudios){
-		if(!previous) {
+        if(!previous) {
 			previous = 3;
 		} else if (previous == 3) {
 			return false;
 		}
-		// navbar.style.backgroundColor = '#F7F7F7';
 		deleteActiveClass();
         addClassActive(document.querySelector('a[href$="experiencia"]').parentNode);
 
@@ -115,7 +107,6 @@ function changeMenuStyle(evt){
         } else if (previous == 4) {
             return false;
         }
-        // navbar.style.backgroundColor = '#F7F7F7';
         deleteActiveClass();
         addClassActive(document.querySelector('a[href$="estudios"]').parentNode);
     } else if (window.pageYOffset >= offsetSobreMi){
@@ -124,7 +115,6 @@ function changeMenuStyle(evt){
         } else if (previous == 5) {
             return false;
         }
-        // navbar.style.backgroundColor = '#F7F7F7';
         deleteActiveClass();
         addClassActive(document.querySelector('a[href$="sobre-mi"]').parentNode);
     }
