@@ -75,7 +75,7 @@ form.addEventListener("submit", function(evt){
     }
 
     if (mensajeTextarea.checkValidity() == false) {
-        alert("Has metido algún caracter demasiado raro en el mensaje");
+        alert("¿pero qué es lo que me quieres decir? Rellena el campo :)");
         mensajeTextarea.focus();
         evt.preventDefault();
         return false;
