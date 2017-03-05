@@ -1,2 +1,2 @@
 # This is my curriculum in HTML5, CSS3 and JavaScript
-Work in progress...
+Práctica desplegada en www.curriculum.amez.info
